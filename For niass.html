@@ -1,0 +1,474 @@
+<html><head><base href="." /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campagne Électorale - Club Informatique</title>
+<style>
+:root {
+  --primary: #1a3c7d;
+  --secondary: #4169e1;
+  --accent: #00bfff;
+  --text: #ffffff;
+  --bg: #0a192f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 1200px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 8vw, 5rem);
+  background: linear-gradient(45deg, var(--accent), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  animation: titleFloat 3s ease-in-out infinite;
+}
+
+.candidate-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.candidate-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  padding: 5px;
+  animation: pulse 2s infinite;
+}
+
+.candidate-image svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg);
+  padding: 20px;
+}
+
+.candidate-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.achievements {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.achievements h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.achievements ul {
+  list-style-position: inside;
+}
+
+.achievements li {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.team-section {
+  padding: 4rem 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.member-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-achievements {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.member-achievements h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.floating-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nav-button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.4);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .candidate-section {
+    text-align: center;
+  }
+  
+  .candidate-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.vision-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95));
+  margin-top: 2rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-10px);
+}
+
+.vision-card h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  border-left: 4px solid var(--accent);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.year {
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas class="floating-particles"></canvas>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Innovons Ensemble</h1>
+    <p>Pour un club informatique plus dynamique, plus innovant, et plus inclusif.</p>
+    <button class="nav-button">Découvrir notre vision</button>
+  </div>
+</section>
+
+<section class="candidate-section">
+  <div class="candidate-image">
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+    </svg>
+  </div>
+  <div class="candidate-info">
+    <h2>Alexandre Dubois</h2>
+    <p>Expert en Intelligence Artificielle et passionné de nouvelles technologies</p>
+    <div class="achievements">
+      <h3>Parcours Professionnel</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2019-2023</div>
+          <h4>Lead Developer chez TechInno</h4>
+          <p>Direction d'une équipe de 10 développeurs sur des projets d'IA innovants</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2017-2019</div>
+          <h4>Chercheur en IA - Université Paris Tech</h4>
+          <p>Publication de 3 papiers de recherche sur le Deep Learning</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2015-2017</div>
+          <h4>Fondateur StartUp EdTech</h4>
+          <p>Création d'une plateforme d'apprentissage adaptatif</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vision-section">
+  <h2 style="text-align: center; margin-bottom: 3rem;">Notre Vision pour le Club</h2>
+  <div class="vision-grid">
+    <div class="vision-card">
+      <h3>Innovation Technologique</h3>
+      <p>- Création d'un lab d'innovation</p>
+      <p>- Workshops mensuels sur les nouvelles technologies</p>
+      <p>- Projets collaboratifs en IA et blockchain</p>
+    </div>
+    <div class="vision-card">
+      <h3>Formation Continue</h3>
+      <p>- Programme de mentorat personnalisé</p>
+      <p>- Parcours d'apprentissage adaptés</p>
+      <p>- Certifications professionnelles</p>
+    </div>
+    <div class="vision-card">
+      <h3>Networking</h3>
+      <p>- Partenariats avec des entreprises tech</p>
+      <p>- Événements de networking mensuels</p>
+      <p>- Opportunités de stages et d'emplois</p>
+    </div>
+    <div class="vision-card">
+      <h3>Communauté</h3>
+      <p>- Hackathons trimestriels</p>
+      <p>- Groupes d'étude collaboratifs</p>
+      <p>- Événements sociaux réguliers</p>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="team-grid">
+    <div class="team-member">
+      <div class="member-avatar">👩‍💻</div>
+      <h3>Sophie Martin</h3>
+      <p>Responsable Communication</p>
+      <div class="member-achievements">
+        <h4>Réalisations</h4>
+        <ul>
+          <li>Développement du site web du département</li>
+          <li>Organisation de 3 conférences tech</li>
+          <li>Création du programme de mentorat étudiant</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="member-avatar">🧑‍💻</div>
+      <h3>Thomas Laurent</h3>
+      <p>Responsable Événements</p>
+      <div class="member-achievements">
+        <h4>Réalisations</h4>
+        <ul>
+          <li>Organisation du CyberSecurity Challenge</li>
+          <li>Mise en place d'ateliers hebdomadaires</li>
+          <li>Partenariats avec 5 entreprises tech</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="member-avatar">👩‍💻</div>
+      <h3>Marie Bernard</h3>
+      <p>Responsable Projets</p>
+      <div class="member-achievements">
+        <h4>Réalisations</h4>
+        <ul>
+          <li>Direction de 3 projets data science</li>
+          <li>Publication recherche en ML</li>
+          <li>Création d'un lab d'innovation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const canvas = document.querySelector('.floating-particles');
+const ctx = canvas.getContext('2d');
+
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * width;
+    this.y = Math.random() * height;
+    this.size = Math.random() * 2 + 1;
+    this.speedX = Math.random() * 3 - 1.5;
+    this.speedY = Math.random() * 3 - 1.5;
+    this.color = `rgba(65, 105, 225, ${Math.random() * 0.5})`;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.x > width || this.x < 0) this.speedX = -this.speedX;
+    if (this.y > height || this.y < 0) this.speedY = -this.speedY;
+  }
+
+  draw() {
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+const particles = Array(50).fill().map(() => new Particle());
+
+function animate() {
+  ctx.clearRect(0, 0, width, height);
+  
+  particles.forEach(particle => {
+    particle.update();
+    particle.draw();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+document.querySelector('.nav-button').addEventListener('click', () => {
+  document.querySelector('.candidate-section').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+document.querySelectorAll('.team-member').forEach(member => {
+  member.addEventListener('mouseenter', () => {
+    member.style.transform = 'translateY(-10px) scale(1.05)';
+  });
+  
+  member.addEventListener('mouseleave', () => {
+    member.style.transform = 'translateY(0) scale(1)';
+  });
+});
+
+// Adding hover effects for vision cards
+document.querySelectorAll('.vision-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-10px)';
+    card.style.background = 'rgba(255, 255, 255, 0.1)';
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0)';
+    card.style.background = 'rgba(255, 255, 255, 0.05)';
+  });
+});
+</script>
+</body></html>
