@@ -296,7 +296,7 @@ body {
   margin: 0 auto;
   background: rgba(65, 105, 225, 0.05);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 0rem;
   box-shadow: 0 0 10px rgba(65, 105, 225, 0.1);
   backdrop-filter: blur(10px);
 }
