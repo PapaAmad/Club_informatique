@@ -297,14 +297,14 @@ body {
   background: rgba(65, 105, 225, 0.05);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 0 30px rgba(65, 105, 225, 0.1);
+  box-shadow: 0 0 10px rgba(65, 105, 225, 0.1);
   backdrop-filter: blur(10px);
 }
 
 .vision-card {
-  padding: 2rem;
-  background: rgba(26, 60, 125, 0.1);
-  border-radius: 15px;
+  padding: 0rem;
+  background: rgba(65, 105, 225, 0.05);
+  border-radius: 10px;
   margin-bottom: 1rem;
   transform: translateX(0);
   opacity: 1;
