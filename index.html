@@ -1,144 +1,146 @@
 <html><head><base href="." /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campagne Électorale - Club Informatique</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<title>Campagne Électorale - Club Informatique</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas class="floating-particles"></canvas>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Innovons Ensemble</h1>
+    <p>Pour un club informatique plus dynamique, plus innovant, et plus inclusif.</p>
+    <button class="nav-button">Découvrir notre vision</button>
+  </div>
+</section>
+
+<section class="candidate-section">
+  <div class="candidate-image">
+    <img src="img/niass.jpg" alt="Ahmadou NIASS" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+  </div>
+  <div class="candidate-info">
+    <h2>Ahmadou NIASS</h2>
+    <p>Elève en ISE 1 Cycle long</p>
+    <!--<div class="achievements">
+      <h3>Parcours Professionnel</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2019-2023</div>
+          <h4>Lead Developer chez TechInno</h4>
+          <p>Direction d'une équipe de 10 développeurs sur des projets d'IA innovants</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2017-2019</div>
+          <h4>Chercheur en IA - Université Paris Tech</h4>
+          <p>Publication de 3 papiers de recherche sur le Deep Learning</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2015-2017</div>
+          <h4>Fondateur StartUp EdTech</h4>
+          <p>Création d'une plateforme d'apprentissage adaptatif</p>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</section>
+
+<section class="vision-section">
+  <h2 style="text-align: center; margin-bottom: 3rem;">Notre Vision pour le Club</h2>
   
-  <canvas class="floating-particles"></canvas>
-  
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Innovons Ensemble</h1>
-      <p>Pour un club informatique plus dynamique, plus innovant, et plus inclusif.</p>
-      <button class="nav-button">Découvrir notre vision</button>
+  <div class="vision-navigation">
+    <button class="vision-arrow prev">
+      <svg viewBox="0 0 24 24">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </button>
+    
+    <div class="vision-indicator">
+      <div class="vision-dot active" data-index="0"></div>
+      <div class="vision-dot" data-index="1"></div>
+      <div class="vision-dot" data-index="2"></div>
+      <div class="vision-dot" data-index="3"></div>
+      <div class="vision-dot" data-index="4"></div>
+      <div class="vision-dot" data-index="5"></div>
+      <div class="vision-dot" data-index="6"></div>
+      <div class="vision-dot" data-index="7"></div>
     </div>
-  </section>
-  
-  <section class="candidate-section">
-    <div class="candidate-image">
-      <img src="img/niass.jpg" alt="Alexandre Dubois" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+    
+    <button class="vision-arrow next">
+      <svg viewBox="0 0 24 24">
+        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+      </svg>
+    </button>
+  </div>
+
+  <h3 class="current-vision-title" style="text-align: center; margin-bottom: 2rem; color: var(--accent);">
+    Interactions et Vulgarisation (1/2)
+  </h3>
+
+  <div class="vision-grid">
+    <div class="vision-card active" data-vision="Interactions et Vulgarisation (1/2)">
+      <h3>Accompagnement des étudiants dans leurs matières en informatique</h3>
+        <p>Nous organiserons des sessions régulières pour échanger avec les étudiants, identifier leurs besoins spécifiques, et les accompagner sur des sujets complexes tels que la programmation, les algorithmes ou encore leurs projets académiques.</p>
     </div>
-    <div class="candidate-info">
-      <h2>Ahmadou NIASS</h2>
+    <div class="vision-card" data-vision="Interactions et Vulgarisation (2/2)">
+      <h3>Promotion des métiers de la Data</h3>
+        <p>Nous proposerons des ateliers et des campagnes de sensibilisation pour mieux faire connaître les métiers émergents dans le domaine de la Data (Data Scientist, Analyste de données, Ingénieur Big Data), afin d’inspirer les étudiants et les orienter vers des carrières prometteuses.</p>
+    </div>
+    <div class="vision-card" data-vision="Collaboration et Partenariats (1/2)">
+      <h3>Renforcement des relations avec les clubs informatiques des autres écoles</h3>
+        <p>Nous travaillerons à établir des partenariats solides avec les clubs d’informatique d’autres établissements pour organiser des événements inter-écoles, favoriser les échanges d’idées, et permettre des collaborations sur des projets innovants.</p>
+    </div>
+    <div class="vision-card" data-vision="Collaboration et Partenariats (2/2)">
+      <h3>Collaboration avec les clubs informatiques du réseau RESA</h3>
+      <p>Des démarches ont déjà été entreprises pour nouer des relations avec les clubs d’informatique du réseau RESA. Ces partenariats ouvriront la voie à des activités communes, telles que des hackathons, des séminaires, ou encore des plateformes d’échange. Nous envisageons également de répondre aux besoins spécifiques de ces clubs en matière d’informatique, en proposant des formations, du partage de ressources, ou un soutien technique adapté.</p>
+    </div>
+    <div class="vision-card" data-vision="Développement et Apprentissage (1/2)">
+      <h3>Organisation de webinaires sur la Data Science et l’intelligence artificielle</h3>
+      <p>Nous inviterons des experts, notamment des anciens étudiants de l’ENSAE, pour animer des sessions sur des sujets tels que l’intelligence artificielle, l’apprentissage automatique, et les tendances actuelles en Data Science. Ces webinaires offriront aux étudiants une compréhension approfondie des applications concrètes et des enjeux de ces disciplines.</p>
+    </div>
+    <div class="vision-card" data-vision="Développement et Apprentissage (2/2)">
+      <h3>Création d’un comité dédié à la Data Science</h3>
+      <p>Nous mettrons en place une équipe d’étudiants passionnés pour développer des projets liés à la Data Science, organiser des ateliers, et participer à des compétitions, tout en valorisant l’excellence académique et pratique dans ce domaine.</p>
+    </div>
+    <div class="vision-card" data-vision="Activités Pratiques et Divertissement (1/2)">
+      <h3>Lancement d’un concours de programmation</h3>
+      <p>Nous proposerons un concours annuel où les étudiants auront l’occasion de tester et d’améliorer leurs compétences à travers des épreuves variées en programmation. Ce concours favorisera la créativité et encouragera un apprentissage actif par le biais de défis stimulants.</p>
+    </div>
+    <div class="vision-card" data-vision="Activités Pratiques et Divertissement (2/2)">
+      <h3>Organisation de tournois de jeux vidéo</h3>
+      <p>Des compétitions amicales autour de jeux populaires tels que FIFA ou NBA2K seront mises en place. Ces événements offriront une pause ludique tout en renforçant les liens sociaux entre les membres du club et les participants.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <h2 style="text-align: center; margin-bottom: 3rem;">Les membres de l'équipe</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <div class="member-avatar">
+        <img src="img/boubs.jpg" alt="Sophie Martin" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      </div>
+      <h3>Papa Boubacar DIOP</h3>
+      <p>Elève en AS3</p>
+
+    </div>
+    <div class="team-member">
+      <div class="member-avatar">
+        <img src="img/pan.jpg" alt="Thomas Laurent" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      </div>
+      <h3>Papa Amadou NIANG</h3>
       <p>Elève en ISE 1 Cycle long</p>
-      <div class="achievements">
-        <h3>Parcours Professionnel</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="year">2019-2023</div>
-            <h4>Lead Developer chez TechInno</h4>
-            <p>Direction d'une équipe de 10 développeurs sur des projets d'IA innovants</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year">2017-2019</div>
-            <h4>Chercheur en IA - Université Paris Tech</h4>
-            <p>Publication de 3 papiers de recherche sur le Deep Learning</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year">2015-2017</div>
-            <h4>Fondateur StartUp EdTech</h4>
-            <p>Création d'une plateforme d'apprentissage adaptatif</p>
-          </div>
-        </div>
-      </div>
+
     </div>
-  </section>
-  
-  <section class="vision-section">
-    <h2 style="text-align: center; margin-bottom: 3rem;">Notre vision pour le club</h2>
-    <div class="vision-grid">
-      <div class="vision-card">
-        <h3>Interactions et Vulgarisation (1/2)</h3>
-        <p>Accompagnement des étudiants dans leurs matières en informatique : 
-          Nous organiserons des sessions régulières pour échanger avec les étudiants, identifier leurs besoins spécifiques, et les accompagner sur des sujets complexes tels que la programmation, les algorithmes ou encore leurs projets académiques.</p>
+    <div class="team-member">
+      <div class="member-avatar">
+        <img src="img/sekou.jpg" alt="Marie Bernard" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
       </div>
-      <div class="vision-card">
-        <h3>Interactions et Vulgarisation (2/2)</h3>
-        <p>Promotion des métiers de la Data : Nous proposerons des ateliers et des campagnes de sensibilisation pour mieux faire connaître les métiers émergents dans le domaine de la Data (Data Scientist, Analyste de données, Ingénieur Big Data), afin d’inspirer les étudiants et les orienter vers des carrières prometteuses.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Collaboration et Partenariats (1/2)</h3>
-        <p>Renforcement des relations avec les clubs informatiques des autres écoles :
-          Nous travaillerons à établir des partenariats solides avec les clubs d’informatique d’autres établissements pour organiser des événements inter-écoles, favoriser les échanges d’idées, et permettre des collaborations sur des projets innovants.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Collaboration et Partenariats (2/2)</h3>
-        <p>Collaboration avec les clubs informatiques du réseau RESA :
-          Des démarches ont déjà été entreprises pour nouer des relations avec les clubs d’informatique du réseau RESA. Ces partenariats ouvriront la voie à des activités communes, telles que des hackathons, des séminaires, ou encore des plateformes d’échange. Nous envisageons également de répondre aux besoins spécifiques de ces clubs en matière d’informatique, en proposant des formations, du partage de ressources, ou un soutien technique adapté.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Développement et Apprentissage (1/2)</h3>
-        <p>Organisation de webinaires sur la Data Science et l’intelligence artificielle :
-          Nous inviterons des experts, notamment des anciens étudiants de l’ENSAE, pour animer des sessions sur des sujets tels que l’intelligence artificielle, l’apprentissage automatique, et les tendances actuelles en Data Science. Ces webinaires offriront aux étudiants une compréhension approfondie des applications concrètes et des enjeux de ces disciplines.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Développement et Apprentissage (2/2)</h3>
-        <p>Création d’un comité dédié à la Data Science :
-          Nous mettrons en place une équipe d’étudiants passionnés pour développer des projets liés à la Data Science, organiser des ateliers, et participer à des compétitions, tout en valorisant l’excellence académique et pratique dans ce domaine.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Activités Pratiques et Divertissement (1/2)</h3>
-        <p>Lancement d’un concours de programmation :
-          Nous proposerons un concours annuel où les étudiants auront l’occasion de tester et d’améliorer leurs compétences à travers des épreuves variées en programmation. Ce concours favorisera la créativité et encouragera un apprentissage actif par le biais de défis stimulants.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Activités Pratiques et Divertissement (2/2)</h3>
-        <p>Organisation de tournois de jeux vidéo :
-          Des compétitions amicales autour de jeux populaires tels que FIFA ou NBA2K seront mises en place. Ces événements offriront une pause ludique tout en renforçant les liens sociaux entre les membres du club et les participants.</p>
-      </div>
+      <h3>Sékou DRAME</h3>
+      <p>Elève en AS3</p>
+
     </div>
-  </section>
-  
-  <section class="team-section">
-    <h2 style="text-align: center; margin-bottom: 3rem;">Les membres de l'équipe</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <div class="member-avatar">
-          <img src="img/boubs.jpg" alt="Sophie Martin" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-        </div>
-        <h3>Papa Boubacar DIOP</h3>
-        <p>Elève en AS3</p>
-        <div class="member-achievements">
-          <h4>Réalisations</h4>
-          <ul>
-            <li>Développement du site web du département</li>
-            <li>Organisation de 3 conférences tech</li>
-            <li>Création du programme de mentorat étudiant</li>
-          </ul>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="member-avatar">
-          <img src="img/pan.jpg" alt="Thomas Laurent" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-        </div>
-        <h3>Papa Amadou NIANG</h3>
-        <p>Elève en ISE 1 Cycle long</p>
-        <div class="member-achievements">
-          <h4>Réalisations</h4>
-          <ul>
-            <li>Organisation du CyberSecurity Challenge</li>
-            <li>Mise en place d'ateliers hebdomadaires</li>
-            <li>Partenariats avec 5 entreprises tech</li>
-          </ul>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="member-avatar">
-          <img src="img/sekou.jpg" alt="Marie Bernard" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-        </div>
-        <h3>Sékou DRAME</h3>
-        <p>Elève en AS3</p>
-        <div class="member-achievements">
-          <h4>Réalisations</h4>
-          <ul>
-            <li>Direction de 3 projets data science</li>
-            <li>Publication recherche en ML</li>
-            <li>Création d'un lab d'innovation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-  </body></html>
+  </div>
+</section>
+<script src="script.js"></script>
+</body></html>

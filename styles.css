@@ -20,7 +20,7 @@ body {
 }
 
 .hero {
-  min-height: 150vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,32 +216,126 @@ body {
 
 .vision-section {
   padding: 4rem 2rem;
-  background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95));
-  margin-top: 2rem;
+  background: linear-gradient(
+    rgba(10, 25, 47, 0.9),
+    rgba(10, 25, 47, 0.95)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(65, 105, 225, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.vision-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.vision-arrow {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: rgba(65, 105, 225, 0.1);
+}
+
+.vision-arrow:hover {
+  background: rgba(65, 105, 225, 0.2);
+  transform: scale(1.1);
+}
+
+.vision-arrow svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent);
+}
+
+.vision-indicator {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vision-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(65, 105, 225, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vision-dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
 }
 
 .vision-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+  background: rgba(65, 105, 225, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(65, 105, 225, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .vision-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
   padding: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.vision-card:hover {
-  transform: translateY(-10px);
+  background: rgba(26, 60, 125, 0.1);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .vision-card h3 {
   color: var(--accent);
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(65, 105, 225, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.vision-card p {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: rgba(65, 105, 225, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.vision-card p:hover {
+  background: rgba(65, 105, 225, 0.1);
+  transform: translateX(10px);
+}
+
+.current-vision-title {
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+  letter-spacing: 1px;
 }
 
 .timeline {
